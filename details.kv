@@ -1,0 +1,146 @@
+
+#:import MapView kivy.garden.mapview.MapView
+#:import MDFloatingActionButton kivymd.uix.button.MDFloatingActionButton
+#:import images_path kivymd.images_path
+
+<Details_reports>: 
+    MDBoxLayout:
+        size: root.width, root.height  
+        md_bg_color: app.theme_cls.primary_color
+        orientation: 'vertical'  
+        MDBoxLayout:
+            size_hint: 1, .10 
+            padding: 20 
+            MDRoundFlatIconButton:
+                icon: 'arrow-left'
+                text: 'Back' 
+                icon_color: 'yellow'  
+                line_color: 'white' 
+                pos_hint: {'center_y' : 0.50} 
+       
+            MDLabel: 
+                text: 'Details' 
+                font_style: 'H4'
+                theme_text_color: "Custom"
+                text_color: [1,5,0.1,1]
+                font_size: 50
+                halign: 'center'
+
+            MDRoundFlatIconButton:
+                icon: 'arrow-right'
+                text: 'Skip' 
+                icon_color: 'yellow'  
+                line_color: 'white'
+                pos_hint: { 'center_y' : 0.50}
+                       
+        MapView: #cordinates of Machala    
+            lat: -3.258111
+            lon: -79.955392
+            zoom: 13
+            on_zoom:
+                self.zoom = 13 if self.zoom < 13 else self.zoom 
+                
+            MapMarkerPopup:  
+                lat: -3.258111
+                lon: -79.955392    
+                   
+                
+                
+                # on_lat: 
+                #     print ('lat:', self.lat)
+                # on_lon:
+                #     print ('lon:', self.lat)
+                #         add_marker: 
+                #             lat: -3.258111
+                #             lon: -79.955392    
+                #             button:
+                #                 on_release:
+                #                     print ('hey')       
+                 
+      
+            MDFloatLayout:
+                size: root.width, root.height
+                
+                MDCard:
+                    size_hint: None, None
+                    size: 1000, 1000
+                    pos_hint: {"center_x": 0.5, "center_y": 0.45}
+                    elevation: 36
+                    padding: 25
+                    spacing: 25
+                    orientation: 'vertical'
+                    line_color: 'yellow'
+                    style:  'outlined'
+                    radius: [dp(9), dp(9), dp(9), dp(9)]
+                    md_bg_color: app.theme_cls.primary_light 
+
+                    MDLabel: 
+                        text: 'Provide a title'
+                        font_size: 40
+                        halign: 'left'
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 15 
+
+                    MDLabel: 
+                        text: '-Pick a category-'
+                        font_size: 40
+                        halign: 'center'
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 15 
+
+                    MDTextField: 
+                        mode: 'rectangle'
+              
+                    
+
+   
+                        
+                        
+        
+
+                    
+                    
+                    
+
+                   
+
+            
+                        
+                        
+
+                   
+                             
+
+                    
+
+
+
+
+
+
+
+
+
+
+             
+            
+                
+
+                
+            
+
+                
+
+            
+            
+                        
+                
+            
+
+                 
+                     
+                        
+
+  
