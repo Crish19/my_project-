@@ -1,0 +1,141 @@
+
+#:import MapView kivy.garden.mapview.MapView
+#:import MDFloatingActionButton kivymd.uix.button.MDFloatingActionButton
+#:import images_path kivymd.images_path
+
+<MyApplication>: 
+    MDBoxLayout:
+        size: root.width, root.height  
+        md_bg_color: app.theme_cls.primary_color
+        orientation: 'vertical'  
+        MDBoxLayout:
+            size_hint: 1, .10 
+            padding: 20
+             
+            MDRoundFlatIconButton:
+                icon: 'account'
+                text: 'Account' 
+                icon_color: 'yellow'  
+                line_color: 'white' 
+                pos_hint: {'center_y' : 0.50} 
+                 
+                
+                
+            MDLabel: 
+                text: 'MyComunityFix'
+                halign: 'right'
+                font_style: 'H4'
+                theme_text_color: "Custom"
+                text_color: [1,5,0.1,1]
+                font_size: 50
+                
+                     
+            MDIcon:
+                icon: 'tools'
+                font_size: '44sp'
+                halign: 'left'
+                
+                
+                
+            MDRoundFlatIconButton:
+                icon: 'numeric-0-box'
+                #badge_icon: 'numeric-10'
+                text: 'Drafts' 
+                icon_color: 'yellow'  
+                line_color: 'white'
+                pos_hint: { 'center_y' : 0.50}
+                       
+        MapView: #cordinates of Machala    
+            lat: -3.258111
+            lon: -79.955392
+            zoom: 13
+            on_zoom:
+                self.zoom = 13 if self.zoom < 13 else self.zoom 
+                
+            MapMarkerPopup:  
+                lat: -3.258111
+                lon: -79.955392    
+                   
+                
+                
+                #on_lat: 
+                    #print ('lat:', self.lat)
+                #on_lon:
+                    #print ('lon:', self.lat)
+                    #     add_marker: 
+                            # lat: -3.258111
+                            # lon: -79.955392    
+                            # button:
+                            #     on_release:
+                            #         print ('hey')
+            MDFloatLayout:
+                pos_hint: {'center_x': 0.5,'center_y': 0.5}
+                size:root.width, root.height 
+                
+                MDTextFieldRound:
+                    pos_hint: {'center_x': 0.5,'center_y': 0.79}
+                    size_hint: .70, None
+                    height: "35dp"
+                    
+                    hint_text: 'Search or scroll the map'
+                    #mode: "rectangle"
+                    icon_left: "magnify"
+                    font_size: '20sp'
+                    #fill_color: 0, 0, 0, .4
+                    #theme_text_color: "Custom"
+                    text_color: [1,5,0.1,1]    
+                    radius: [10, 10, 0, 1]
+                    font_size: 50
+                    color_mode: 'accent'
+                     
+                    #normal_color: app.theme_cls.accent_color
+                    
+                                  
+            MDBoxLayout:
+                orientation: 'vertical'
+                padding: 40
+                size: root.width, root.height
+                MDFillRoundFlatButton:
+                    text: 'New Report Here'
+                    elevation: 36 
+                    md_bg_color: app.theme_cls.primary_color
+                    font_size: "48sp"
+                    text_color: 'yellow'        
+                    font_style: 'H4' 
+                    pos_hint: {'center_x' : .5, 'center_y' : .5 }
+                    size_hint: 1, None    
+       
+            MDFloatLayout:
+                pos_hint: {'center_x': 0.5,'center_y': 0.5}
+                size:root.width, root.height 
+                spacing: 20 
+                MDFloatingActionButton:  
+                    elevation: 36  
+                    icon: 'google-maps' 
+                    icon_size: '64sp'
+                    pos_hint: {'center_x' : .93 , 'center_y': 0.50 } 
+                    on_press: root.on_press_buttom1 () 
+                    #icon_color: 'blue'              
+                MDFloatingActionButton: 
+                    elevation: 36  
+                    icon: 'alert'  
+                    icon_size: '20sp'
+                    pos_hint: {'center_x' : .93 , 'center_y': 0.35 }
+                    on_press: root.on_press_buttom2 () 
+
+            
+        
+
+               
+
+         
+           
+                    
+            
+          
+
+                 
+                     
+                        
+
+  
