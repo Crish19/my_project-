@@ -1,5 +1,5 @@
 
-from turtle import width
+from turtle import textinput, width
 from kivy.lang import Builder
 from kivymd.app import MDApp
 from kivy.uix.widget import Widget
@@ -34,6 +34,8 @@ from kivy.uix.slider import Slider
 from kivy.uix.dropdown import DropDown
 from kivy.uix.button import Button
 from kivy.base import runTouchApp
+from kivy.uix.textinput import TextInput
+	
 
 
 Builder.load_file('details.kv')

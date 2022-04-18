@@ -83,15 +83,17 @@
                         padding_y: 15 
 
                     MDLabel: 
-                        text: '-Pick a category-'
+                        text: '--Pick a category--'
                         font_size: 40
-                        halign: 'center'
+                        halign: 'left'
                         size_hint_y: None
                         height: self.texture_size[1]
                         padding_y: 15 
+                        line_color: 'yellow'
 
-                    MDTextField: 
-                        mode: 'rectangle'
+                    TextInput: 
+                        hint_text: ' Please fill in details of the problem'
+                        multiline: True 
               
                     
 
