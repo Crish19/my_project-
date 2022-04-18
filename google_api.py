@@ -5,7 +5,7 @@ import smtplib
 # api_file = open("api_file2.txt", "r")
 # api_key = api_file.readline()
 # api_file.close()
-api_key = 'AIzaSyAbttP47Vl-ByQTrtaKmJ7e-IRicPSB6J0' 
+api_key = '' 
 # home address input
 home = input("Enter a home address\n") 
   
